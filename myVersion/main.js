@@ -7,3 +7,15 @@ function changeTheme() {
     }
     theme.href = 'css/light.css';
 }
+
+//menu
+
+const bt = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+
+function toggleMenu() {
+    bt.classList.toggle('opened');
+    menu.classList.toggle('opened');
+}
+
+bt.addEventListener('click', toggleMenu);

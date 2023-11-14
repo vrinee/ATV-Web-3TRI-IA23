@@ -1,0 +1,15 @@
+/*scrollbar*/
+
+::-webkit-scrollbar-track{
+    background-color: grey;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(196, 190, 190);
+}
+
+
+.frontPage{
+    background-image: url("../img/leaves.jpg");
+    background-size: cover;
+}

@@ -1,19 +1,107 @@
+html,body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --bt-size: 4rem;
+}
+/*scrollbar*/
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
 /*botão do menu*/
 .bottom-bar{
-    --bt-size: 4rem;
     position: fixed;
     bottom: 0;
-    height: var(--bt-size);
+    height: calc(var(--bt-size)*1.1);
     width: 100%;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.432);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .menu-toggle {
     --bt-padding: 0.3rem;
     position: fixed;
-    bottom: 0;
     width: var(--bt-size);
     height: var(--bt-size);
-    padding: var(--bt-padding);
     left: calc(50% - var(--bt-size) / 2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    border: none;
 }
+
+.menu-toggle > span{
+    position: absolute;
+    height: calc(var(--bt-padding)*1.5);
+    background-color: black;
+    border-radius: 0.2rem;
+    transition:0.3s ease-in-out;
+}
+.menu-toggle > span:nth-child(1){
+    top: var(--bt-padding);
+    width: 50%;
+}
+.menu-toggle > span:nth-child(2){
+    top: calc(50% - (var(--bt-padding)*1.5) / 2);
+    width: 70%;
+}
+.menu-toggle > span:nth-child(3){
+    bottom:var(--bt-padding);
+    width: 100%;
+}
+
+.menu-toggle:hover > span,
+.menu-toggle:focus > span{
+    width: 100%;
+}
+.menu-toggle.opened > span:nth-child(1){
+    width: 100%;
+}
+
+.menu-toggle.opened > span:nth-child(2){
+    width: 70%;
+}
+
+.menu-toggle.opened > span:nth-child(3){
+    width: 50%;
+}
+
+/*menu*/
+
+.menu {
+    opacity: 0;
+    visibility: hidden;
+    height:30rem;
+    width:0;
+    background-color: gray;
+    transition: 0.5s ease-in-out;
+}
+
+.menu.opened {
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    
+}
+
+/*imagem de entrada*/
+
+.frontPage{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - var(--bt-size)*1.1);
+    justify-content: center;
+    align-items: center;
+}
+
+.frontPage img{
+    width: 50%;
+}
+
