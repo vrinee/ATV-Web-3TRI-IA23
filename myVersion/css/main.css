@@ -1,0 +1,19 @@
+/*botão do menu*/
+.bottom-bar{
+    --bt-size: 4rem;
+    position: fixed;
+    bottom: 0;
+    height: var(--bt-size);
+    width: 100%;
+    background-color: black;
+}
+
+.menu-toggle {
+    --bt-padding: 0.3rem;
+    position: fixed;
+    bottom: 0;
+    width: var(--bt-size);
+    height: var(--bt-size);
+    padding: var(--bt-padding);
+    left: calc(50% - var(--bt-size) / 2);
+}
