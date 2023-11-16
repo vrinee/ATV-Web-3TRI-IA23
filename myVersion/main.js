@@ -22,3 +22,20 @@ function toggleMenu() {
 }
 
 bt.addEventListener('click', toggleMenu);
+
+//album modal
+
+const album = document.querySelectorAll('.album');
+
+function openAlbum(clickedAlbum) {
+    let classOfAlbum = clickedAlbum.getAttribute('class');
+    let firstClass = classOfAlbum.split(' ')[1];
+    let dialog = document.querySelector(`dialog.${firstClass}`);
+    dialog.showModal();
+}
+
+album.forEach((album) => {
+    album.addEventListener('click', () => openAlbum(album));
+}
+);
+

@@ -1,28 +1,38 @@
 :root{
     --main-color: rgb(230, 230, 230);
     --secondary-color: rgb(173, 173, 173);
+    --opac-main-color: rgba(230, 230, 230, 0.1);
+    --opac-secondary-color: rgba(173, 173, 173, 0.5);
 }
 
 
 /*scrollbar*/
 
 ::-webkit-scrollbar-track{
-    background-color: grey;
+    background-color:grey;
 }
 
 ::-webkit-scrollbar-thumb{
     background-color: rgb(196, 190, 190);
 }
+/*barra inferior*/
 
-/*imagem frontal*/
-
+.bottom-bar{
+    background-color: var(--opac-secondary-color);
+}
 /*barras laterais*/
 
 .leftBar{
-    background-image: linear-gradient(to left,var(--main-color),var(--secondary-color));
+    background-image: linear-gradient(to left,var(--opac-main-color),var(--secondary-color));
 }
 .rightBar{
-    background-image: linear-gradient(to right,var(--main-color),var(--secondary-color));
+    background-image: linear-gradient(to right,var(--opac-main-color),var(--secondary-color));
+}
+
+/*Menu*/
+
+.menu{
+    background-color: var(--secondary-color);
 }
 /*texto*/
 
