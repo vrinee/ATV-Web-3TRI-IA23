@@ -1,11 +1,14 @@
 //troca de tema
 const theme = document.querySelector('#theme');
+const leaf = document.querySelector('#backgroundImg');
 function changeTheme() {
     if (theme.getAttribute('href') == 'css/light.css') {
         theme.href = 'css/dark.css';
+        leaf.src = 'img/leavesB&W.jpg';
         return;
     }
     theme.href = 'css/light.css';
+    leaf.src = 'img/leaves.jpg';
 }
 
 //menu
