@@ -1,6 +1,21 @@
 //troca de tema
+const linkTheme = document.querySelector('#theme-opener');
+const themeModal = document.querySelector('#themeChanger');
+
+function toggleTheme() {
+    themeModal.showModal();
+    if(themeModal.open){
+        document.querySelectorAll('dialog button').forEach(
+            bt => bt.addEventListener('click', () => themeModal.close()));
+    }
+}
+
+linkTheme.addEventListener('click', toggleTheme);
+
+const btTheme = document.querySelector('#themeBt');
 const theme = document.querySelector('#theme');
 const leaf = document.querySelector('#backgroundImg');
+
 function changeTheme() {
     if (theme.getAttribute('href') == 'css/light.css') {
         theme.href = 'css/dark.css';
@@ -10,6 +25,8 @@ function changeTheme() {
     theme.href = 'css/light.css';
     leaf.src = 'img/leaves.jpg';
 }
+
+btTheme.addEventListener('click', changeTheme);
 
 //menu
 
@@ -27,15 +44,21 @@ bt.addEventListener('click', toggleMenu);
 
 const album = document.querySelectorAll('.album');
 
+
 function openAlbum(clickedAlbum) {
     let classOfAlbum = clickedAlbum.getAttribute('class');
     let firstClass = classOfAlbum.split(' ')[1];
     let dialog = document.querySelector(`dialog.${firstClass}`);
     dialog.showModal();
+    if(dialog.open){
+        document.querySelectorAll('dialog button').forEach(
+            bt => bt.addEventListener('click', () => dialog.close()));
+    }
 }
 
 album.forEach((album) => {
     album.addEventListener('click', () => openAlbum(album));
 }
 );
+
 

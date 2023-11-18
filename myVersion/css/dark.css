@@ -1,19 +1,94 @@
+:root{
+    --main-color: rgb(46, 46, 46);
+    --secondary-color: rgb(100, 100, 100);
+    --opac-main-color: rgba(46, 46, 46, 0.1);
+    --opac-secondary-color: rgba(100, 100, 100, 0.5);
+}
+
+
 /*scrollbar*/
 
 ::-webkit-scrollbar-track{
-    background-color: grey;
+    background-color:grey;
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: black;
+    background-color: rgb(196, 190, 190);
+}
+/*barra inferior*/
+
+.bottom-bar{
+    background-color: var(--opac-secondary-color);
+}
+/*barras laterais*/
+
+.leftBar{
+    background-image: linear-gradient(to left,var(--opac-main-color),var(--secondary-color));
+}
+.rightBar{
+    background-image: linear-gradient(to right,var(--opac-main-color),var(--secondary-color));
 }
 
-/*imagem frontal*/
+/*Menu*/
 
+.menu{
+    background-color: var(--secondary-color);
+}
 
+.menu > ul > li > a{
+    color: black;
+}
+
+button:active{
+    background-color: var(--secondary-color);
+}
 /*texto*/
 
+section{
+    background-color: var(--main-color);
+}
+
 section > p{
-    background-color: grey;
     box-shadow: 0px 0px 15px 0px grey;
+}
+
+section > h2{
+    background-image: linear-gradient(to left, var(--main-color) 25%,var(--secondary-color), var(--main-color) 75%);
+    color: rgb(22, 22, 22);
+}
+
+section > img{
+    box-shadow: 0px 0px 15px 0px grey;
+}
+
+#introducao > h2 {
+    background-image: linear-gradient(to left, var(--main-color) 25%, var(--secondary-color), var(--main-color) 75%);
+}
+
+
+/*Album-dialog*/
+
+dialog:modal{
+    background-color: var(--main-color);
+    border: 5px inset var(--secondary-color);
+    box-shadow: inset 0px 0px 15px 0px grey;
+}
+
+dialog:modal > img{
+    box-shadow: 0px 0px 15px 10px grey;
+}
+.tracks > ol{
+    background-color: var(--main-color);
+    box-shadow: inset 0px 0px 15px 0px grey;
+}
+
+dialog:modal .tracks > ol > li{
+    background-color: var(--main-color);
+    box-shadow: inset 0px 0px 15px 0px var(--secondary-color);
+}
+
+dialog > button{
+    background-color: var(--main-color);
+    box-shadow: inset 0px 0px 7px 0px grey;
+    border: 3px ridge var(--secondary-color);
 }
