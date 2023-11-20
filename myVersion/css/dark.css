@@ -3,6 +3,7 @@
     --secondary-color: rgb(100, 100, 100);
     --opac-main-color: rgba(46, 46, 46, 0.1);
     --opac-secondary-color: rgba(100, 100, 100, 0.5);
+    color:white
 }
 
 
@@ -36,7 +37,7 @@
 }
 
 .menu > ul > li > a{
-    color: black;
+    color:white;
 }
 
 button:active{
@@ -54,7 +55,7 @@ section > p{
 
 section > h2{
     background-image: linear-gradient(to left, var(--main-color) 25%,var(--secondary-color), var(--main-color) 75%);
-    color: rgb(22, 22, 22);
+    color: rgb(228, 228, 228);
 }
 
 section > img{
@@ -72,6 +73,7 @@ dialog:modal{
     background-color: var(--main-color);
     border: 5px inset var(--secondary-color);
     box-shadow: inset 0px 0px 15px 0px grey;
+    color:white
 }
 
 dialog:modal > img{
