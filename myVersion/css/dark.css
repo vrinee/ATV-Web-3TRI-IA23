@@ -79,7 +79,7 @@ dialog:modal > img{
 }
 .tracks > ol{
     background-color: var(--main-color);
-    box-shadow: inset 0px 0px 15px 0px grey;
+    box-shadow: 0px 0px 15px 0px grey;
 }
 
 dialog:modal .tracks > ol > li{
